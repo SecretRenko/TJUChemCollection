@@ -24,7 +24,7 @@
 
 ## 如何使用
 
-1.  **克隆仓库**：`git clone `
+1.  **克隆仓库**：`git clone https://github.com/SecretRenko/TJUChemCollection.git`
 2.  **阅读**：直接打开相应章节的 LaTeX (`.tex`) 文件进行编译即可。注意需要Elegantbook的模板以及一些宏包。
 3.  **贡献**：如果您发现笔误或想补充内容，欢迎提交 Issue 或 Pull Request。
 
