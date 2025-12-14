@@ -1,0 +1,236 @@
+\documentclass[lang=cn,newtx,10pt,scheme=chinese]{elegantbook}
+
+\xeCJKsetup{AutoFakeBold=true}%%解决中文不能加粗的问题
+\setCJKmainfont[BoldFont={FZHei-B01},ItalicFont={FZKai-Z03}]{FZShuSong-Z01}
+\setCJKsansfont{FZHei-B01}
+\setCJKfamilyfont{zhsong}{FZShuSong-Z01}
+\setCJKfamilyfont{zhhei}{FZHei-B01}
+\setCJKfamilyfont{zhkai}{FZKai-Z03}
+\setCJKfamilyfont{zhfs}{FZFangSong-Z02}
+\setCJKfamilyfont{zhli}{FZLiShu-S01}
+
+
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{chemformula}
+\usepackage{mhchem}
+
+\usepackage{caption}
+\usepackage{subcaption}
+
+%计数器
+\newcounter{MajorCount}
+\newcounter{Section}[MajorCount]
+\newcounter{MinorCount}[Section]
+
+
+%%大题环境
+\newenvironment{NT}[1]{\stepcounter{MajorCount} \noindent \textbf{第\theMajorCount 题~#1} \vspace{0.5em}}{\vspace{1em}}
+
+%\newcommand{\NT}[1]{\stepcounter{MajorCount} \noindent \textbf{第\theMajorCount 题~#1} \vspace{0.5em}}
+
+%%分题号
+\newcommand{\Sec}[1]{\vspace{0.2em}\stepcounter{Section}\noindent\textbf{\theMajorCount-\theSection~\fangsong{#1}}\vspace{0.2em}}
+
+%%小题号
+\newcommand{\Se}{\stepcounter{MinorCount}\noindent \textbf{\theMajorCount-\theSection-\theMinorCount~}}
+
+%%选做题
+\newcommand{\Sel}{\stepcounter{MinorCount}\noindent \textbf{\theMajorCount-\theSection-\theMinorCount~\textbf{\kaishu (选做)}~}}
+
+%%%%%%%%%%%%%%%%%%%%%
+
+\title{ElegantBook：优美的 \LaTeX{} 书籍模板}
+\subtitle{Elegant\LaTeX{} 经典之作}
+
+\author{Ethan Deng \& Liam Huang \& syvshc \& sikouhjw \& Osbert Wang}
+\institute{Elegant\LaTeX{} Program}
+\date{2025/12/14}
+\version{0.1}
+\bioinfo{自定义}{信息}
+
+\extrainfo{注意：本模板自 2023 年 1 月 1 日开始，不再更新和维护！}
+
+\setcounter{tocdepth}{3}
+
+\logo{logo-blue.png}
+\cover{cover.jpg}
+
+% 本文档命令
+\usepackage{array}
+\newcommand{\ccr}[1]{\makecell{{\color{#1}\rule{1cm}{1cm}}}}
+
+% 修改标题页的橙色带
+\definecolor{customcolor}{RGB}{32,178,170}
+\colorlet{coverlinecolor}{customcolor}
+\usepackage{cprotect}
+
+\graphicspath{{Reac/}{image/}{figure/}}%设置图片目录
+
+\begin{document}
+
+
+
+\chapter*{25-26学年第一学期高等有机化学期末试题（回忆版）}
+\vspace*{-1em}
+\begin{quotation}
+	\kaishu
+	
+	本回忆版试题由24级应用化学（拔尖班）制作。感谢张润森和张永祺同学帮助补充完善了第三大题，感谢~Elegant\LaTeX{} Program。
+	
+	回忆版试题仅供参考，不保证与真题完全一致。\textcolor{red}{整理者不对本文档的读者的成绩负责！！请勿拿着本文档去问老师问题，或以其他任何方式将本习题泄露给老师或学院。}
+	
+	本课程序号：00410
+	
+	考试时间：第14周~~2025.12.14~8:00~~\textasciitilde~10:00
+	
+	本回忆版试题的原始$.tex$文件已开源至\href{}{Github}。如本试题中有不准确的地方，欢迎各位补充指正。
+	
+	试题最后更新时间：2025.12.14
+	
+\end{quotation}
+
+\vspace*{-1em}
+
+\section*{一、解释题}
+\subsection*{1.一个甾体手性碳的构型判断}
+
+标出分子中所有手性碳的相对构型。
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.4\textwidth]{1}
+\end{figure}
+\vspace*{-0.5em}
+
+\subsection*{2.超共轭效应}
+试从超共轭的角度出发，论证为何稳定性顺序为:
+\begin{enumerate}
+	\item $Me_3C^+~>~MeH_2C^+~>~H_3C^+$
+	\item $Me_3C\cdot~~>~MeH_2C\cdot~~>~H_3C\cdot$
+\end{enumerate}
+\vspace{1em}
+
+\subsection*{3.反应活性}
+如下图所示，两结构相似的化合物在相同条件下反应性截然不同。试解释原因。
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.35\textwidth]{2}
+\end{figure}
+
+\newpage
+
+\section*{二、异丙苯法制苯酚与Nylon~6的合成}
+
+写出括号中的结构，并画出Beckmann重排和第三步的详细机理。
+
+\begin{figure}[ht]
+	\centering
+	\vspace{1em}
+	\includegraphics[width=0.95\textwidth]{3}
+\end{figure}
+
+%\newpage
+
+\section*{三、基础反应考察}
+\begin{enumerate}
+	\item 写出括号中物质的结构。其中$R$为大位阻烷基\\
+		\begin{minipage}[h]{1\textwidth}
+			\vspace{1em}
+			\centering
+			\includegraphics[width=0.5\textwidth]{3-1}
+		\end{minipage}
+   		\vspace{1em}
+	
+	\item 写出括号中物质的结构\\
+		\begin{minipage}[h]{1\textwidth}
+   		 	\vspace{1em}	
+			\centering
+			\includegraphics[width=0.7\textwidth]{3-2}
+		\end{minipage}
+		\vspace{1em}
+	
+	\item 写出括号中物质的结构\\
+		\begin{minipage}[h]{1\textwidth}
+			\vspace{1em}	
+			\centering
+			\includegraphics[width=0.6\textwidth]{3-3}
+		\end{minipage}
+		\vspace{1em}
+	
+	\item 按照稳定性顺序排序下列物质\\
+		\begin{minipage}[h]{1\textwidth}
+			\vspace{1em}	
+			\centering
+			\includegraphics[width=0.7\textwidth]{3-4}
+		\end{minipage}
+		\vspace{1em}
+
+	%\newpage
+	
+	\item 写出括号中物质的结构\\
+		\begin{minipage}[h]{1\textwidth}
+			\vspace{1em}	
+			\centering
+			\includegraphics[width=0.7\textwidth]{3-5}
+		\end{minipage}
+		\vspace{1em}
+		
+	\item 写出括号中物质的结构\\
+		\begin{minipage}[h]{1\textwidth}
+			\vspace{1em}	
+			\centering
+			\includegraphics[width=0.48\textwidth]{3-6}
+		\end{minipage}
+		\vspace{1em}
+		
+	\item 写出括号中物质的结构\\
+		\begin{minipage}[h]{1\textwidth}
+			\vspace{1em}	
+			\centering
+			\includegraphics[width=0.9\textwidth]{3-7}
+		\end{minipage}
+		\vspace{1em}
+		
+	\item 写出括号中物质的结构\\
+		\begin{minipage}[h]{1\textwidth}
+			\vspace{1em}	
+			\centering
+			\includegraphics[width=0.45\textwidth]{3-8}
+		\end{minipage}
+		\vspace{1em}
+
+\end{enumerate}
+
+%\newpage
+
+\section*{四、周环反应}
+
+纯净的光甾醇久置后纯度会下降，体系中出现了麦角固醇、焦钙化甾醇、异焦钙化甾醇。试解释原因。
+
+\kaishu（提示：经过了预钙化甾醇中间体） 
+
+\begin{minipage}[h]{1\textwidth}
+	\vspace{1em}	
+	\centering
+	\includegraphics[width=0.3\textwidth]{4}
+	\vspace{1em}
+	\captionof*{figure}{\fangsong 光甾醇的结构，其余结构略。}
+\end{minipage}
+
+\vspace{10em}
+
+\begin{postulate*}
+	\vspace{0.2em}
+	\hspace{2em}本资料旨在让备考的同学们了解考试难度，心里有个底。不要指望着写完这套卷子就能稳了，还请认真复习。因难度较低，故不提供答案，自行查书即可。另外，请勿将本习题泄露给老师或学院，否则可能导致你自己的期末题目变得不可预测。
+	
+	\hspace{2em}虽然老师说不会捞人，但是实际上考试内容大多为课程原题，好好听课就不可能挂科。
+	
+	\hspace{2em}整理者在此由衷建议各位日后希望从业于有机化学的读者认真学习高等有机化学。个人感觉，本课程的期末考试内容仅为课程内容的一点零头，考试甚至还没有有机化学G的小测难度高。如果要成为一名训练有素的有机化学家，仅仅通过了本课程的期末考试是远远不够的。
+	
+	\hspace{2em}建议完成时间：<~45min.
+\end{postulate*}
+
+
+\end{document}
