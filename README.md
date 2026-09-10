@@ -6,7 +6,7 @@
 
 | 课程 | 学期 | 内容 | 在线查看 |
 | --- | --- | --- | --- |
-| 高等有机化学 | 2025–2026 学年第一学期 | 期末试题（回忆版） | [PDF](courses/advanced-organic-chemistry/2025-2026-sem1/exam.pdf) |
+| 高等有机化学 | 2025–2026 学年第一学期 | 期末试题（回忆版） | [PDF](courses/advanced-organic-chemistry/2025-2026-sem1/25-26第一学期高等有机化学期末.pdf) |
 
 每份资料按“课程 → 学期”组织，源文件、插图与可直接阅读的 PDF 放在同一资料目录中。
 
@@ -16,7 +16,7 @@ courses/
     └── 2025-2026-sem1/
         ├── README.md
         ├── exam.tex
-        ├── exam.pdf
+        ├── 25-26第一学期高等有机化学期末.pdf
         ├── figures/
         └── sources/
 ```

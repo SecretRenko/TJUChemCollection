@@ -4,7 +4,7 @@
 
 ## 文件说明
 
-- [`exam.pdf`](exam.pdf)：可直接阅读和下载的成品。
+- [`25-26第一学期高等有机化学期末.pdf`](25-26第一学期高等有机化学期末.pdf)：可直接阅读和下载的成品。
 - [`exam.tex`](exam.tex)：LaTeX 源文件。
 - [`figures/`](figures/)：文档编译使用的 PNG 插图。
 - [`sources/`](sources/)：保留的 ChemDraw 源文件；当前文件名沿用原仓库命名，避免在对应关系不确定时错误重命名。
